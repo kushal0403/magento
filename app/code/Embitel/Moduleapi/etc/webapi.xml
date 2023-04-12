@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+<route url="/V1/go/next" method="GET">
+<service class="Embitel\Moduleapi\Api\DemoInterface" method="getProfile1"/>
+<resources>
+<resource ref="anonymous"/>
+</resources>
+</route>
+
+
+<!-- <route url="/V1/go/next1" method="GET">
+<service class="Embitel\Moduleapi\Api\DemoInterface" method="getProfile2"/>
+<resources>
+<resource ref="anonymous"/>
+</resources>
+</route>
+
+<route url="/V1/go/next2" method="GET">
+<service class="Embitel\Moduleapi\Api\DemoInterface" method="getProfile3"/>
+<resources>
+<resource ref="anonymous"/>
+</resources>
+</route>
+
+<route url="/V1/go/next3" method="POST">
+<service class="Embitel\Moduleapi\Api\DemoInterface" method="getCustomerdetails"/>
+<resources>
+<resource ref="anonymous"/>
+</resources>
+</route> -->
+
+<route url="/V1/go/next1" method="POST">
+<service class="Embitel\Moduleapi\Api\DemoInterface" method="setCustomerdetails"/>
+<resources>
+<resource ref="anonymous"/>
+</resources>
+</route>
+</routes>

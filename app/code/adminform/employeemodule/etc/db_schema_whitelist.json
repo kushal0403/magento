@@ -1,0 +1,21 @@
+{
+    "kushals_tb": {
+        "column": {
+            "id": true,
+            "empid": true,
+            "fname": true,
+            "lname": true,
+            "email": true,
+            "cname": true,
+            "dept": true,
+            "occupation": true,
+            "mobno": true,
+            "address": true,
+            "jdate": true,
+            "bdate": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

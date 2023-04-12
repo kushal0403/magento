@@ -1,0 +1,34 @@
+type Query {
+    personinfo :personinfoOutput @resolver(class : "Embitel\\Moduleapi\\Model\\Resolver\\Customer") @doc(description: "person info")
+
+}
+
+type personinfoOutput {
+    total_count : Int @doc(description: "Total No. of persons"),
+    items : [personinfo] @doc(description: "person Data")
+}
+
+type personinfo {
+    firstname : String @doc(description: "personFirstName"),
+    lastname : String @doc(description: "personLastName"),
+    email : String @doc(description: "personEmail"),
+    mobile : String @doc(description: "personMobile"),
+    city : String @doc(description: "personCity"),
+    state : String @doc(description: "personState"),
+    country : String @doc(description: "personCountry"),
+}
+
+type Mutation {
+    addDetails (input: detailsInput! @doc(description:"An input you have to fill")):
+    addDetailsOutput @resolver(class : "Embitel\\Moduleapi\\Model\\Resolver\\statusDisplay")
+    @doc(description: "Mutation output")
+}
+
+input detailsInput {
+    groupName:String! @doc(description: "Enter groupName")
+}
+
+type addDetailsOutput {
+    groupName:String @doc(description: "Mutation message")
+}
+

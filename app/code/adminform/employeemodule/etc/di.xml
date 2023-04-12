@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+<preference for="Magento/Sales/Block/Order/View" type="adminform/employeemodule/Block/Order/View"/>
+<preference for="Magento/Sales/Model/Order" type="adminform/employeemodule/Model/Order"/>
+<type name="Magento\Catalog\Model\Product">
+<plugin name="afterGetName" type="adminform\employeemodule\Plugin\Product" sortOrder="1" />
+</type>
+<type name="Magento\Checkout\Model\Cart">
+<plugin name="beforeAddProduct" type="adminform\employeemodule\Plugin\Cart" sortOrder="1" />
+</type>
+</config>

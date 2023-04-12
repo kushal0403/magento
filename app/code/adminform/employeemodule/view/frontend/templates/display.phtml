@@ -1,0 +1,25 @@
+<?php 
+
+$test=$block->getArticles();
+
+foreach($test as $data):
+
+    
+?>
+<table border=1>
+    <tr>
+    <td><?php echo $data->getempid(); ?></td>
+    <td><?php echo $data->getfname(); ?></td>
+    <td><?php echo $data->getlname(); ?></td>
+    <td><?php echo $data->getemail(); ?></td>
+    <td><?php echo $data->getcname(); ?></td>
+    <td><?php echo $data->getoccupation(); ?></td>
+    <td><?php echo $data->getmobno(); ?></td>
+    <td><?php echo $data->getaddress(); ?></td>
+    <td><?php echo $data->getjdate(); ?></td>
+    <td><?php echo $data->getbdate(); ?></td>
+</tr>
+
+
+<?php endforeach; ?>
+</table>
